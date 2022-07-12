@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C8FFFF"
+    tools:context=".foodcategory.FoodInfoFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/iv_arrowBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:paddingTop="5dp"
+                android:src="@mipmap/outline_arrow_back_white_36"
+                app:layout_constraintBottom_toTopOf="@id/iv_infoImg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_infoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="가게이름"
+                android:textColor="#3CA0FF"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/iv_arrowBack"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/iv_infoImg"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/sample_food"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_infoTitle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_infoGugun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="위치 : 강서구"
+                android:textColor="#3CA0FF"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_infoImg" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_infoAddr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:maxWidth="350dp"
+                android:maxLines="2"
+                android:text="주소 : 어디어디어디어디"
+                android:textColor="#3CA0FF"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_infoGugun" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_infoTel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:text="전화번호 : 051-123-4567"
+                android:textColor="#3CA0FF"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_infoAddr1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_infoTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:text="영업시간 : 오픈 11:00 / 마감 23:00"
+                android:textColor="#3CA0FF"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_infoTel" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_infoMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:maxWidth="340dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="메뉴 : 한돈모둠, 청둥오리능이백숙, 한돈김치찌개"
+                android:textColor="#3CA0FF"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_infoTime" />
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/tv_infoUrl"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:text="웹 둘러보기 &ndash;&gt;"-->
+<!--                android:textColor="#3CA0FF"-->
+<!--                android:textSize="24sp"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/tv_infoMenu" />-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_infoContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_infoMenu"
+                android:maxWidth="395dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="7dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="좋은 재료로 직접담은 김치와 밑반찬, 시골집에서 공수한 장류 및 장아찌들을 사용하여 30년이 넘게 꾸준히 직장인들의 사랑을 받아온 곳으로, 미식가들 사이에서 특히 평이 좋은 곳이라 한다. 연회를 위한 단체석도 마련되어 있다."
+                />
+
+            <RelativeLayout
+                android:id="@+id/map_view"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_infoContent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_infoMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/tv_infoMenu"
+                app:layout_constraintBottom_toBottomOf="@id/tv_infoMenu"
+                android:layout_marginStart="5dp"
+                android:text="더보기"
+                android:textColor="#888888"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>
